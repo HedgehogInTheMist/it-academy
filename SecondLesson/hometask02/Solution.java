@@ -5,8 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Lesson Two Exercise Two 
- * Enter two numbers and compare them.
+ * Lesson Two HomeTaskTwo; 
+ * <br>Enter two numbers and compare them.
  * 
  * @author Hedgehog
  */

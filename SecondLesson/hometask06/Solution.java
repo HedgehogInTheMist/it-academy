@@ -5,7 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Modify integer amount of currency in writing form
+ * Lesson Two HomeTaskSix;
+ * <br>Modify integer amount of currency in writing form
  * 
  * @author Hedgehog
  *

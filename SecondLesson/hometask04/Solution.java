@@ -5,9 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Lesson Two Exercise Four
- * 
- * Checking out System.in on whether entered year is leap year or not.
+ * Lesson Two HomeTaskFour;
+ * <br>Checking out System.in on whether entered year is leap year or not.
  *   
  * @author Hedgehog
  *
@@ -28,8 +27,7 @@ public class Solution {
 	}
 /**
  * Putting in only integers, other values discarding
- * 	
- * @return
+ *	
  */
 	public static int getInt() {
 		String str;

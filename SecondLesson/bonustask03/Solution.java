@@ -21,7 +21,7 @@ public class Solution {
 /**
  * In fact, the method calculates factorial
  * @param n - incoming parameter gives computing boundary
- * @return - returns factorian N;
+ * @return - returns factorial N;
  */
 	public static BigInteger factorial(int n) {
 		BigInteger returnValue = BigInteger.ONE;

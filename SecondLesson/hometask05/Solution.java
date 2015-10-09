@@ -5,7 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Calculating ideal weight
+ * Lesson Two HomeTaskFive;
+ * <br>Calculating ideal weight
  * 
  * @author Hedgehog
  *

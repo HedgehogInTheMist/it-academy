@@ -1,8 +1,9 @@
 package SecondLesson.hometask01;
 /**
- * Creates variable type String with any text (not too short).
- * <br>Further displays amount of symbols in the string
- * <br>next divide string in two equal halfs and displays obtained strings on the screen. 
+ * Lesson Two HomeTaskOne;
+ * <br>Creates variable type String with any text (not too short).
+ * Further displays amount of symbols in the string
+ * next divide string in two equal halfs and displays obtained strings on the screen. 
  * 
  * @author Hedgehog
  *

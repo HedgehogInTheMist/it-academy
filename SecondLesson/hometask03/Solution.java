@@ -5,9 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Lesson Two Exercise Three
- * 
- * Calculate quotient of two numbers 
+ * Lesson Two HomeTaskThree;
+ * <br>Calculate quotient of two numbers 
  * 
  * @author Hedgehog
  *
@@ -30,7 +29,6 @@ public class Solution {
 /**
  * 	Putting in only integers, other values discarding
  * 
- * @return
  */
 	public static int getInt(Scanner in) {
 		String str;

@@ -5,7 +5,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Correlate number with days of the week
+ * Lesson Two HomeTaskSeven;
+ * <br>Correlate number with days of the week
  * 
  * @author Hedgehog
  *

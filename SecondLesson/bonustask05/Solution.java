@@ -28,11 +28,6 @@ public class Solution {
 		return n*(n+1) / 2;
 	}
 
-/**
- * 
- * @return
- */
-	
 	public static int getInt(Scanner in) {
 		String inputString;
 		Pattern pattern = Pattern.compile("^\\d+$");
@@ -44,35 +39,3 @@ public class Solution {
 		return Integer.parseInt(inputString);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
