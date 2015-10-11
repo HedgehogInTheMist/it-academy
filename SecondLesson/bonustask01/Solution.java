@@ -12,7 +12,6 @@ import java.util.Scanner;
  */
 public class Solution {
 	public static void main(String[] args) throws IOException {
-		//BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Enter date in format dd.mm.yyyy with . as delimeters: ");
 		Scanner scanner = new Scanner(System.in);
 		String inputString = scanner.nextLine();
