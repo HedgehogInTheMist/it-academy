@@ -1,7 +1,8 @@
+//Lesson Three HomeTaskFive;
 package ThirdLesson.hometask05;
 
 /**
- * Contains implementation of searching max element of array and its index
+ * Contains implementation of searching min element of array and its index
  * 
  * @author Hedgehog
  *
