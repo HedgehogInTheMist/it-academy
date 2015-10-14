@@ -1,5 +1,7 @@
 package string_arrays.hometask03;
-
+/**
+ * Implements deleting from text all symbols which aren't letters or symbols of space
+ */
 import java.util.Scanner;
 
 public class Solution {
