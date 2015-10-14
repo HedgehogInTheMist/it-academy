@@ -1,3 +1,4 @@
+//string_arrays HomeTaskOne
 package string_arrays.hometask01;
 
 import java.util.Scanner;
@@ -17,24 +18,22 @@ public class Solution {
 		String inputText = inputInitialData.nextLine();
 
 		System.out.print("Enter position of a symbol: ");
-		int position = inputInitialData.nextInt();
+		int symbolPosition = inputInitialData.nextInt();
 
 		System.out.print("Enter symbol for substitution: ");
 		Scanner substitution = new Scanner(System.in);
-		String subtitutSymbol = substitution.nextLine();
+		String substitutSymbol = substitution.nextLine();
 		
-		char symbol = subtitutSymbol.charAt(0); 
-		int symbolPosition = position - 1;
-
-		String[] actionString = inputText.split(" "); //Splitting initial string on words and putting them in array
+		char symbol = substitutSymbol.charAt(0); //Determine symbol for substitution
+		String[] actionString = inputText.split(" "); //Splitting initial string on words and putting them in arrayWholeString
 
 		for (int i = 0; i < actionString.length; i++) {
-			char[] arr = actionString[i].toCharArray();
-													  //running though array and modifying symbol in accordance with requirements
-			if (arr.length > symbolPosition) {			
-				for (int j = 0; j < arr.length; j++) {
-					arr[symbolPosition] = symbol;
-					System.out.print(arr[j]);
+			char[] arrayWholeString = actionString[i].toCharArray();
+													  //running though arrayWholeString and modifying symbol in accordance with requirements
+			if (symbolPosition - 1 < arrayWholeString.length) {			
+				for (int j = 0; j < arrayWholeString.length; j++) {
+					arrayWholeString[symbolPosition - 1] = symbol;
+					System.out.print(arrayWholeString[j]);
 				}
 			} else {
 				System.out.print(actionString[i]);
