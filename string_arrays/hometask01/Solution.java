@@ -22,22 +22,22 @@ public class Solution {
 		System.out.print("Enter symbol for substitution: ");
 		Scanner substitution = new Scanner(System.in);
 		String subtitutSymbol = substitution.nextLine();
-
-		char symbol = subtitutSymbol.charAt(0);
+		
+		char symbol = subtitutSymbol.charAt(0); 
 		int symbolPosition = position - 1;
 
-		String[] workString = inputText.split(" ");
+		String[] actionString = inputText.split(" "); //Splitting initial string on words and putting them in array
 
-		for (int i = 0; i < workString.length; i++) {
-			char[] arr = workString[i].toCharArray();
-
-			if (arr.length > symbolPosition) {
+		for (int i = 0; i < actionString.length; i++) {
+			char[] arr = actionString[i].toCharArray();
+													  //running though array and modifying symbol in accordance with requirements
+			if (arr.length > symbolPosition) {			
 				for (int j = 0; j < arr.length; j++) {
 					arr[symbolPosition] = symbol;
 					System.out.print(arr[j]);
 				}
 			} else {
-				System.out.print(workString[i]);
+				System.out.print(actionString[i]);
 			}
 			System.out.print(" ");
 		}
