@@ -3,10 +3,10 @@ package ThirdLesson.hometask11;
 
 import java.util.Scanner;
 /**
- * 
+ * 				!!! UNFORTUNATELLY THIS TASK IS UNFINISHED YET !!!
  * Implements replacing columns in order to get elements of main diagonal ascending. 
  * @author Hedgehog
- *						!!! UNFORTUNATELLY THIS TASK IS UNFINISHED YET !!!
+ *						
  */
 public class Solution {
 	public static void main(String[] args) {
