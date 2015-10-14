@@ -1,4 +1,4 @@
-package string_arrays.hometask04;
+﻿package string_arrays.hometask04;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ public class Solution {
 	}
 
 /**
- * Establish whether first symbol of the word is consonant or not 
+ * Establishes whether first symbol of the word is consonant or not 
  * @param ch - first symbol of the word
  * @return the index of the first occurrence of the character in the character sequence represented by "aeiouy", or -1 if the character does not occur. 
  */
