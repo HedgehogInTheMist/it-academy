@@ -16,9 +16,9 @@ public class Solution {
 	}
 	
 	public static boolean isUniqueChar(String str) {
-		boolean[] chars = new boolean[256];
+		boolean[] chars = new boolean[1024];
 		for(int i = 0; i < str.length(); i++) {
-			int indexValue = str.charAt(i);
+			char indexValue = str.charAt(i);
 			if(chars[indexValue]) {
 				System.out.println(chars[indexValue]);
 				return false;
