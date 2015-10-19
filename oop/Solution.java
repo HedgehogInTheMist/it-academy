@@ -2,37 +2,35 @@ package oop;
 
 import java.util.Scanner;
 
+
 public class Solution {
+	public static PhoneAbonent[] abonents;
+	
 	public static void main(String[] args) {
-		PhoneAbonent[] abonents = buildAbonent();
+		 abonents = buildAbonent();
 		
 		Scanner scanner = new Scanner(System.in);
 		String inputString;
 		System.out.println("Here is user-interface. For exit press 'q'");
-		System.out.println(
-				"1: для выбора сведений об абонентах, у которых время внутригородских разговоров превышает заданное");
-		System.out.println("2: для выбора сведений об абонентах, которые пользовались междугородной связью");
-		System.out.println("3: для выбора сведений об абонентах в алфавитном порядке");
-		PhoneAbonent phoneAbonent = new PhoneAbonent();
+		System.out.println("1: Сведения об абонентах, у которых время внутригородских разговоров превышает заданное");
+		System.out.println("2: Сведения об абонентах, которые пользовались междугородной связью");
+		System.out.println("3: Сведения об абонентах в алфавитном порядке");
 		
 		while (true) {
 			inputString = scanner.nextLine();
 			switch (inputString) {
 			case "1":
 				System.out.println("Введите контрольное время внутригородских переговоров");
-				phoneAbonent.headerPrint();
-				phoneAbonent.longTimeSpeaking(Integer.valueOf(scanner.nextLine()), abonents);
-				
+				double citytalk = Double.valueOf(scanner.nextLine());
+				longTimeSpeaking(citytalk);
 				break;
 			case "2":
 				System.out.println("Сведения об абонентах, которые пользовались междугородней связью");
-				phoneAbonent.headerPrint();
-				phoneAbonent.interCitySpeaking(abonents);
+				interCitySpeaking(abonents);
 				break;
 			case "3":
 				System.out.println("Cведения об абонентах в алфавитном порядке");
-				phoneAbonent.headerPrint();
-				phoneAbonent.abonetsDetails(abonents);
+				fullAbonetsDetails(abonents);
 				break;
 			default:
 				break;
@@ -44,8 +42,60 @@ public class Solution {
 	
 		scanner.close();
 	}
-	
 
+	/**
+	 * @param citytalk
+	 */
+	public static void longTimeSpeaking(double citytalk) {
+		System.out.println("Cведения об абонентах, у которых время внутригородских разговоров превышает " + citytalk + " минут");
+		PhoneAbonent [] foundAbonents = new PhoneAbonent[10];
+		for (int i = 0; i < abonents.length; i++) {
+			if(abonents[i].getCityTalktime() > citytalk) {
+				foundAbonents[i] = abonents[i];
+			}  
+		}
+		if (foundAbonents != null) {
+			headerPrint();
+			showAbonentInfo(foundAbonents);
+		}
+	}
+	
+	public static void interCitySpeaking(PhoneAbonent[] abonents) {
+		PhoneAbonent[] foundAbonents = new PhoneAbonent[10];
+		for (int i = 0; i < abonents.length; i++) {
+			if(abonents[i].getInterCityTalktime() > 0) {
+				foundAbonents[i] = abonents[i];
+			}
+		}
+		if (foundAbonents != null) {
+			headerPrint();
+			showAbonentInfo(foundAbonents);
+		}
+	}
+
+	public static void fullAbonetsDetails(PhoneAbonent[] abonents) {
+		//Arrays.sort(abonents);
+		PhoneAbonent[] foundAbonents = new PhoneAbonent[10];
+			if (abonents != null) {
+				headerPrint();
+				showAbonentInfo(abonents);
+		}
+	}
+	
+	public static void headerPrint() {
+		System.out.format("%-6s%-10s%-10s%-12s%-12s%-12s%-10s", "№п/п", "Фамилия", "Имя", "Адрес", "Кредитка", "Город (мин)", "Межгород (мин)");
+		System.out.println();
+	}
+	
+	public static void showAbonentInfo(PhoneAbonent [] foundAbonents) {
+		for(PhoneAbonent abonent: foundAbonents) {
+			if(abonent != null) {	
+				System.out.format("%-6s%-10s%-10s%-12s%-12s%-12s%-10s", abonent.getId(), abonent.getSurname(), abonent.getName(), abonent.getAddress(), abonent.getCreditCardNumber(), abonent.getCityTalktime(), abonent.getInterCityTalktime());
+				System.out.println();
+			}
+		}
+	}
+	
 	/**
 	 * @return
 	 */
@@ -73,5 +123,7 @@ public class Solution {
 		abonents[9] = phoneAbonent9;
 		return abonents;
 	}
+
+
 }
 	
