@@ -1,5 +1,6 @@
 package oop;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -74,8 +75,7 @@ public class Solution {
 	}
 
 	public static void fullAbonetsDetails(PhoneAbonent[] abonents) {
-		//Arrays.sort(abonents);
-		PhoneAbonent[] foundAbonents = new PhoneAbonent[10];
+			Arrays.sort(abonents);
 			if (abonents != null) {
 				headerPrint();
 				showAbonentInfo(abonents);
@@ -123,7 +123,6 @@ public class Solution {
 		abonents[9] = phoneAbonent9;
 		return abonents;
 	}
-
 
 }
 	

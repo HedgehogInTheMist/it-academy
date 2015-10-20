@@ -1,6 +1,6 @@
 package oop;
 
-public class PhoneAbonent {
+public class PhoneAbonent implements Comparable<Object> {
 	private long id;
 	private	String surname;
 	private String name;
@@ -78,8 +78,16 @@ public class PhoneAbonent {
 	public void setInterCityTalktime(double interCityTalktime) {
 		this.interCityTalktime = interCityTalktime;
 	}
-
 	
+	@Override
+	public int compareTo(Object obj) {		
+		PhoneAbonent abonent = (PhoneAbonent)obj;
+		int compare = surname.compareTo(abonent.surname);
+		if(compare != 0) {
+			return compare;
+		}
+		return compare;
+	}
 	
 }
 	
