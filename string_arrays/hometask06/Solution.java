@@ -1,3 +1,4 @@
+//string_arrays HomeTaskSix
 package string_arrays.hometask06;
 
 import java.util.Scanner;

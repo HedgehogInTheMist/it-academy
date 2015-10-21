@@ -1,3 +1,4 @@
+//string_arrays HomeTaskFive
 package string_arrays.hometask05;
 
 import java.util.Scanner;
