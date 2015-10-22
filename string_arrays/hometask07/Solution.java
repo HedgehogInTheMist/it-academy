@@ -27,7 +27,7 @@ public class Solution {
 	public static StringBuffer stringContraction(Scanner scanner) {
 		String inputString = scanner.nextLine();
 		StringBuffer contractedString = new StringBuffer();
-		int count = 1; 										//counts amount of repeating chars
+		int count = 1; 				//counts amount of repeating chars
 		char charInCurrentPos = inputString.charAt(0);
 
 		//running through source string, counting chars, and modifying inputString in accordance with conditions
