@@ -21,9 +21,9 @@ public class Solution {
 		String s2 = secondString.nextLine();		//for checking purposes: "erbottlewat"
 		
 		if(isSubstring(s1, s2)) {
-			System.out.println("String + " + "\"" + s1 + "\"" + " is substring of string " + "\"" + s2 + "\".");
+			System.out.println("String " + "\"" + s1 + "\"" + " is substring of string " + "\"" + s2 + "\".");
 		} else {
-			System.out.println("String + " + "\"" + s1 + "\"" + " isn't substring of string " + "\"" + s2 + "\".");
+			System.out.println("String " + "\"" + s1 + "\"" + " isn't substring of string " + "\"" + s2 + "\".");
 		}
 
 		firstString.close();

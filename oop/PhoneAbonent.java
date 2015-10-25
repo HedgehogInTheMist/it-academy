@@ -1,5 +1,9 @@
 package oop;
-
+/**
+ * Class where circumscribed all infromation about phone abonets 
+ * @author Hedgehog
+ *
+ */
 public class PhoneAbonent implements Comparable<Object> {
 	private long id;
 	private	String surname;
