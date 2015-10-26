@@ -19,9 +19,9 @@ public class Solution {
 		Scanner scanner = new Scanner(System.in);
 		String inputString;
 		System.out.println("Here is user-interface. For exit press 'q'");
-		System.out.println("1: Information about abonents whose continuance of intracity calls surpasses given (from keyboard)");
-		System.out.println("2: Information about abonents who make use of long-distance calls");
-		System.out.println("3: Information about abonents in alphabetical order of their surname");
+		System.out.println("1: Fetch abonents whose continuance of intracity calls surpasses given (from keyboard)");
+		System.out.println("2: Fetch abonents who make use of long-distance calls");
+		System.out.println("3: Fetch abonents in alphabetical order of their surname");
 
 		while (true) {
 			inputString = scanner.nextLine();
@@ -127,7 +127,7 @@ public class Solution {
 	}
 
 	/**
-	 * Creates collection listOfAbonent where is kept all information about Phone Abonents in the shape of objects 
+	 * Creates collection where is kept all information about Phone Abonents in the shape of objects 
 	 * @return created ArrayList with information 
 	 */
 	public static ArrayList<PhoneAbonent> buildAbonent() {
