@@ -1,12 +1,15 @@
 package oop_2;
 
-public class SemiPreciousStone extends Stone implements Naturalness{
+public class SemiPreciousStone extends NaturalStone implements Fluorescent, Dichroism {
 
+	private boolean luminescence = false;
+	
 	@Override
-	public String isNatural() {
-		// TODO Auto-generated method stub
-		String isNatural = "Stone is natural by default";
-		return isNatural;
+	public void Phosphoresce() {
+		if(luminescence = true) {
+			System.out.println("I glow");
+		} else {
+			System.out.println("I never glow from SemiPreciousStone class");
+		}
 	}
-
 }
