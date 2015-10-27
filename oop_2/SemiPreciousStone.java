@@ -2,35 +2,55 @@ package oop_2;
 
 public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 
-	private boolean dichroism = true; 
-	private double length;
-	private double width;
-	private double height;
-	private int transparency; //gradation from 1 up to 24 from transparent to opaque (nontransparent)
+	private boolean dichroism = true;
+	private int transparency; // gradation from 1 up to 24 from transparent to
+								// opaque (nontransparent)
 	
+	public SemiPreciousStone() {
+	}
 	
+	public SemiPreciousStone(String name, double length, double width, double height, int hardness, int transparency) {
+		super.setName(name);
+		super.setLength(length);
+		super.setWidth(width);
+		super.setHeight(height);
+		super.setHardness(hardness);
+	}
+
+	@Override
 	public double getLength() {
-		return length;
+		// TODO Auto-generated method stub
+		return super.getLength();
 	}
 
+	@Override
 	public void setLength(double length) {
-		this.length = length;
+		// TODO Auto-generated method stub
+		super.setLength(length);
 	}
 
+	@Override
 	public double getWidth() {
-		return width;
+		// TODO Auto-generated method stub
+		return super.getWidth();
 	}
 
+	@Override
 	public void setWidth(double width) {
-		this.width = width;
+		// TODO Auto-generated method stub
+		super.setWidth(width);
 	}
 
+	@Override
 	public double getHeight() {
-		return height;
+		// TODO Auto-generated method stub
+		return super.getHeight();
 	}
 
+	@Override
 	public void setHeight(double height) {
-		this.height = height;
+		// TODO Auto-generated method stub
+		super.setHeight(height);
 	}
 
 	public int getTransparency() {
@@ -69,18 +89,9 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 		this.dichroism = dichroism;
 	}
 
-	Jeweller jeweller;
-	
-	@Override
-	void print() {
-		// TODO Auto-generated method stub
-		super.print();
-		System.out.println("I print out from SemiPreciousStone");
-	}
-
 	@Override
 	public boolean changeVisibleColor() {
-		if(dichroism = true) {
+		if (dichroism = true) {
 			System.out.println("It's possible for this jewelry to change visible color");
 			return true;
 		} else {
@@ -89,5 +100,4 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 		return false;
 	}
 
-	
 }

@@ -18,41 +18,28 @@ package oop_2;
  * Итого: 8*3 = 24 градаци прозрачности камней. от 1 - прозрачные с незначительными примесями до 24 - не прозрачные с примесями заметными невооруженным глазом
  */
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Solution {
 	static ArrayList<Fossil> fossil = new ArrayList<Fossil>();
 	static ArrayList<PreciousStone> precious_stones  = new ArrayList<PreciousStone>();
-
+	
 	public static void main(String[] args) {
 		
 		String userAnswer;
+		Scanner repeatAgain = new Scanner(System.in);
 		do {
-			Random random = new Random();
-			ArrayList<PreciousStone> precious_stones  = new ArrayList<PreciousStone>();
-			for(int i = 0; i < 20; i++) {
-				precious_stones.add(new PreciousStone("Precious_Stones " + i, random.nextInt(8) + 1, random.nextInt(5) + 1, random.nextInt(10) + 1, random.nextInt(10) + 1 ));
-			}
-			
-			for(PreciousStone element : precious_stones) {
-				if(element instanceof PreciousStone) {
-					System.out.println(element.getName() + " " + element.getHardness() + " " + element.getLength() + " " + element.getWidth() + " " + element.getHeight());
-				}
-			}
-			
+			ProductionShift productionShift = new ProductionShift();
+			productionShift.startProductionShift();
+
 			/*
 			 * Here should be logic of production jewelry
+			 * or more possible in NEW class
 			 */
 			
-			//ProductionShift
-			
-			ProductionShift productionShift = new ProductionShift("Madur", "Rosovsky", "Kristoff", "Kovalskiy");
 			System.out.println("Repeat again?");
-			Scanner repeatAgain = new Scanner(System.in);
 			userAnswer = repeatAgain.nextLine();
 		} while((userAnswer.startsWith("y")) || (userAnswer.startsWith("Y")));
-		
-		
+		repeatAgain.close();
 	}
 }
