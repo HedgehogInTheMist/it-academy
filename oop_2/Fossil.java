@@ -21,7 +21,14 @@ abstract public class Fossil {
 		this.hardness = hardness;
 	}
 
+	public Fossil() {
+		
+	}
+	public Fossil(String name, int hardness) {
+		this.name = name;
+		this.hardness = hardness;
+	}
 	void print() {
-		System.out.println("Я из класса Fossil");
+		System.out.println("I print from Fossil");
 	}
 }
