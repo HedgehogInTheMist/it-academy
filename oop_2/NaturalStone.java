@@ -2,31 +2,40 @@ package oop_2;
 
 public abstract class NaturalStone extends Fossil {
 	
-	private double length;
-	private double width;
-	private double height;
+	private int length;
+	private int width;
+	private int height;
+	private String color;
 	
-	public double getLength() {
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public int getLength() {
 		return length;
 	}
 
-	public void setLength(double length) {
+	public void setLength(int length) {
 		this.length = length;
 	}
 
-	public double getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
-	public void setWidth(double width) {
+	public void setWidth(int width) {
 		this.width = width;
 	}
 
-	public double getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(int height) {
 		this.height = height;
 	}
 

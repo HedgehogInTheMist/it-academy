@@ -7,17 +7,12 @@ public class ProductionShift {
 
 	private String workOption; //for choosing work shift - first or second 
 	private String[] jewelryVariety = {"Beads", "Pendants", "Earrings", "Diadems", "Neklaces"};
+	protected String[] preciousStoneVariety = {"Diamond", "Corund", "Ruby", "Sapphire", "Beryl", "Aquamarine", "Alexandrite", "Pearl"};
 	private static ArrayList<Jeweller> jewellers = new ArrayList<Jeweller>();
 	
-		public String[] getJewelryVariety() {
-		return jewelryVariety;
-	}
-
-	public void setJewelryVariety(String[] jewelryVariety) {
-		this.jewelryVariety = jewelryVariety;
-	}
-
-		public String getWorkOption() {
+	GemSorting gemSorting = new GemSorting();
+	
+	public String getWorkOption() {
 		return workOption;
 	}
 
@@ -29,28 +24,12 @@ public class ProductionShift {
 	}
 	
 	
-	//ProductionShift productionShift = new ProductionShift();
-	
 	PreciousStone preciousStone = new PreciousStone();
 	SemiPreciousStone semiPreciousStone = new SemiPreciousStone();
-	//Jeweller jeweller = new Jeweller();
 	
 	public void startProductionShift() {
 		buildJewellerWorkers();
-		
 		jewellerRotation();
-		
-		Random random = new Random();
-		ArrayList<PreciousStone> precious_stones  = new ArrayList<PreciousStone>();
-		for(int i = 0; i < 10; i++) {
-			precious_stones.add(new PreciousStone(getJewelryVariety()[random.nextInt(4) + 1] + " " + i, random.nextInt(8) + 1, random.nextInt(5) + 1, random.nextInt(10) + 1, random.nextInt(10) + 1, random.nextInt(7) + 1));
-		}
-		
-		for(PreciousStone element : precious_stones) {
-			if(element instanceof PreciousStone) {
-				System.out.println(element.getName() + " " + element.getHardness() + " " + element.getLength() + " " + element.getWidth() + " " + element.getHeight() + " " + element.getTransparency());
-			}
-		}
 	}
 
 	/**
@@ -85,7 +64,4 @@ public class ProductionShift {
 
 			
 }
-
-/*	static ArrayList<Fossil> fossil = new ArrayList<Fossil>();
-	static ArrayList<PreciousStone> precious_stones  = new ArrayList<PreciousStone>();
-*/	
+	

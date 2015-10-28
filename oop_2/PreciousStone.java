@@ -9,7 +9,7 @@ public class PreciousStone extends NaturalStone implements Fluorescent {
 	public PreciousStone() {
 	}
 
-	public PreciousStone(String name, double length, double width, double height, int hardness, int transparency) {
+	public PreciousStone(String name, int length, int width, int height, int hardness, int transparency) {
 		super.setName(name);
 		super.setLength(length);
 		super.setWidth(width);

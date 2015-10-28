@@ -9,7 +9,7 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 	public SemiPreciousStone() {
 	}
 	
-	public SemiPreciousStone(String name, double length, double width, double height, int hardness, int transparency) {
+	public SemiPreciousStone(String name, int length, int width, int height, int hardness, int transparency) {
 		super.setName(name);
 		super.setLength(length);
 		super.setWidth(width);
@@ -18,37 +18,37 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 	}
 
 	@Override
-	public double getLength() {
+	public int getLength() {
 		// TODO Auto-generated method stub
 		return super.getLength();
 	}
 
 	@Override
-	public void setLength(double length) {
+	public void setLength(int length) {
 		// TODO Auto-generated method stub
 		super.setLength(length);
 	}
 
 	@Override
-	public double getWidth() {
+	public int getWidth() {
 		// TODO Auto-generated method stub
 		return super.getWidth();
 	}
 
 	@Override
-	public void setWidth(double width) {
+	public void setWidth(int width) {
 		// TODO Auto-generated method stub
 		super.setWidth(width);
 	}
 
 	@Override
-	public double getHeight() {
+	public int getHeight() {
 		// TODO Auto-generated method stub
 		return super.getHeight();
 	}
 
 	@Override
-	public void setHeight(double height) {
+	public void setHeight(int height) {
 		// TODO Auto-generated method stub
 		super.setHeight(height);
 	}
