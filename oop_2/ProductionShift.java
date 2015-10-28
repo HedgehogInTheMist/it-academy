@@ -1,6 +1,8 @@
 package oop_2;
 
+import java.awt.Transparency;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class ProductionShift {
@@ -29,7 +31,22 @@ public class ProductionShift {
 	
 	public void startProductionShift() {
 		buildJewellerWorkers();
-		jewellerRotation();
+		jewellerRotation();		//Our jewellers change each other in production
+		
+		int preciousOrSemiPrecious = (Math.random() < 0.5) ? 0 : 1;
+			if(preciousOrSemiPrecious == 1) {
+				System.out.println(" Precious gems");
+				gemSorting.buildListOfPreciousGems();
+				Collections.sort(gemSorting.listOfPreciousGems); //Sorting our collection by field transparency in accordance with condition
+				gemSorting.headerPrint();
+				gemSorting.showAllPreciousStone(gemSorting.listOfPreciousGems);
+			} else {
+				System.out.println(" Semi-precious gems");
+				gemSorting.buildListOfSemiPreciousGems();
+				Collections.sort(gemSorting.listOfSemiPreciousGems); //Sorting our collection by field transparency in accordance with condition
+				gemSorting.headerPrint();
+				gemSorting.showAllSemiPreciousStone(gemSorting.listOfSemiPreciousGems);
+			}
 	}
 
 	/**
@@ -39,8 +56,10 @@ public class ProductionShift {
 		int randIndex = (Math.random() < 0.5) ? 0 : 1;
 		if(randIndex == 0) {
 			System.out.println(jewellers.get(0).getName() + " " + jewellers.get(0).getSurname() + " is at work upon " + getRandWorkOption());
+			System.out.print(jewellers.get(0).getSurname() + " considers it done out of");
 		} else {
 			System.out.println(jewellers.get(1).getName() + " " + jewellers.get(1).getSurname() + " is at work upon " + getRandWorkOption());
+			System.out.print(jewellers.get(0).getSurname() + " considers it done out of");
 		}
 	}
 

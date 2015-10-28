@@ -52,10 +52,11 @@ public class Solution {
 			
 			GemSorting gemSorting = new GemSorting();
 			
-			gemSorting.buildListOfPreciousGems();
+			
+			/*gemSorting.buildListOfPreciousGems();
 			gemSorting.headerPrint();
 			
-			gemSorting.showAllPreciousStone(gemSorting.listOfPreciousGems);
+			gemSorting.showAllPreciousStone(gemSorting.listOfPreciousGems);*/
 
 			/*
 			 * Here should be logic of production jewelry

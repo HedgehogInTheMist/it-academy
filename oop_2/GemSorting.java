@@ -8,6 +8,8 @@ import java.util.Random;
  * @author Hedgehog
  */
 public class GemSorting {
+	boolean preciousOrSemiPrecious;
+	
 	public ArrayList<PreciousStone> listOfPreciousGems = new ArrayList<>();
 	public ArrayList<SemiPreciousStone> listOfSemiPreciousGems = new ArrayList<>();
 	//public static HashMap<String, Integer> hardnessRate = new HashMap<>();
@@ -62,7 +64,7 @@ public class GemSorting {
 		
 		for(SemiPreciousStone element : listOfSemiPreciousGems) {
 			//if(element instanceof SemiPreciousStone) {
-				System.out.println(element.getName() + " " + element.getHardness() + " " + element.getLength() + " " + element.getWidth() + " " + element.getHeight() + " " + element.getTransparency());
+			System.out.format("%-14s%-12d%-12d%-12d%-12d%-9d%n", element.getName(), element.getHardness(), element.getLength(), element.getWidth(), element.getHeight(), element.getTransparency());
 			//}
 		}
 	}
@@ -71,13 +73,6 @@ public class GemSorting {
 		System.out.format("%-14s%-12s%-12s%-12s%-12s%-19s%n", "List Of Gems", "Length (mm)", "Width (mm)", "Height (mm)", "Hardness", "Transparency" );
 	}
 
-	/*	public static void headerPrint() {
-		System.out.format("%-6s%-10s%-10s%-12s%-12s%-16s%-20s", "№п/п", "Surname", "Name", "Address", "Credit card",
-				"IntraCity (min)", "Long-distance (min)");
-		System.out.println();
-	}
-*/	
-	
 	public void buildListOfPreciousGems() {
 		for(int i = 0; i < 10; i++) {
 			String n = preciousStoneVariety[random.nextInt(preciousStoneVariety.length)];
@@ -88,8 +83,6 @@ public class GemSorting {
 			int t = random.nextInt(24) + 1;
 			listOfPreciousGems.add(new PreciousStone(n, l, w, hi, ha, t));
 		}
-		
-		
 	}
 	
 	public void buildListOfSemiPreciousGems() {
@@ -101,14 +94,7 @@ public class GemSorting {
 			int ha = random.nextInt(22) + 3;
 			int t = random.nextInt(24) + 1;
 			listOfSemiPreciousGems.add(new SemiPreciousStone(n, l, w, hi, ha, t));
-					
 		}
-		
-		/*for(PreciousStone element : precious_stones) {
-			if(element instanceof PreciousStone) {
-				System.out.println(element.getName() + " " + element.getHardness() + " " + element.getLength() + " " + element.getWidth() + " " + element.getHeight() + " " + element.getTransparency());
-			}
-		}*/
 	}
 	
 	

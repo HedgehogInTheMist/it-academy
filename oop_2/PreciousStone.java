@@ -1,6 +1,6 @@
 package oop_2;
 
-public class PreciousStone extends NaturalStone implements Fluorescent {
+public class PreciousStone extends NaturalStone implements Fluorescent, Comparable<Object> {
 
 	private boolean luminescence = true; 
 	private int transparency; // gradation from 1 up to 24 from transparent to
@@ -72,5 +72,16 @@ public class PreciousStone extends NaturalStone implements Fluorescent {
 			System.out.println("I never glow from PreciousStone class");
 			return false;
 		}
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		PreciousStone tmpCompare = (PreciousStone) o;
+		if(this.transparency < tmpCompare.transparency) {
+			return -1;
+		} else if(this.transparency > tmpCompare.transparency) {
+			return 1;
+		}
+		return 0;
 	}
 }

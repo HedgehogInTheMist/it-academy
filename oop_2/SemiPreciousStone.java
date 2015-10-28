@@ -1,6 +1,6 @@
 package oop_2;
 
-public class SemiPreciousStone extends NaturalStone implements Dichromatism {
+public class SemiPreciousStone extends NaturalStone implements Dichromatism, Comparable<Object> {
 
 	private boolean dichroism = true;
 	private int transparency; // gradation from 1 up to 24 from transparent to
@@ -15,6 +15,7 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 		super.setWidth(width);
 		super.setHeight(height);
 		super.setHardness(hardness);
+		this.transparency = transparency;
 	}
 
 	@Override
@@ -100,4 +101,17 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism {
 		return false;
 	}
 
+	//@Override
+	public int compareTo(Object obj) {
+		SemiPreciousStone tmpCompare = (SemiPreciousStone)obj;
+		if(this.transparency < tmpCompare.transparency) {
+			return -1;
+		} else if(this.transparency > tmpCompare.transparency) {
+			return 1;
+		}
+		return 0;
+	}
 }
+
+
+
