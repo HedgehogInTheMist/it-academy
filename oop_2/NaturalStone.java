@@ -39,28 +39,23 @@ public abstract class NaturalStone extends Fossil {
 		this.height = height;
 	}
 
-	//public NaturalStone(String name,)
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return super.getName();
 	}
 
 	@Override
 	public void setName(String name) {
-		// TODO Auto-generated method stub
 		super.setName(name);
 	}
 
 	@Override
 	public int getHardness() {
-		// TODO Auto-generated method stub
 		return super.getHardness();
 	}
 
 	@Override
 	public void setHardness(int hardness) {
-		// TODO Auto-generated method stub
 		super.setHardness(hardness);
 	}
 
@@ -70,5 +65,8 @@ public abstract class NaturalStone extends Fossil {
 	public NaturalStone(String name) {
 		
 	}
-	
+
+	public int getTransparency() {
+		return (Integer) null;
+	}
 }
