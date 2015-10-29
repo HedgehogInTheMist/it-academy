@@ -1,6 +1,5 @@
 package oop_2;
 
-import java.awt.Transparency;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -30,9 +29,15 @@ public class ProductionShift {
 	SemiPreciousStone semiPreciousStone = new SemiPreciousStone();
 	
 	public void startProductionShift() {
-		buildJewellerWorkers();
-		jewellerRotation();		//Our jewellers change each other in production
-		
+		buildJewellerWorkers();	//Create two working jewellers
+		jewellerRotation();		//Our jewellers change each other in production. (Either of two jewellers may work immediatly
+		preciousOrSemiPrecious();	//Selection production resource (Produce jewelry either out of precious gems or semi-precious gems   
+	}
+
+	/**
+	 * 
+	 */
+	public void preciousOrSemiPrecious() {
 		int preciousOrSemiPrecious = (Math.random() < 0.5) ? 0 : 1;
 			if(preciousOrSemiPrecious == 1) {
 				System.out.println(" Precious gems");
@@ -69,7 +74,7 @@ public class ProductionShift {
 	public void buildJewellerWorkers() {
 		Jeweller jewellerOne = new Jeweller("Kristoff", "Kovalskiy");
 		jewellers.add(jewellerOne);
-		Jeweller jewellerTwo = new Jeweller("Madur", "Rosovsky");
+		Jeweller jewellerTwo = new Jeweller("Herbert", "Rosovsky");
 		jewellers.add(jewellerTwo);
 	}
 	
