@@ -1,6 +1,10 @@
 package oop_2;
 
-abstract public class Fossil {
+import java.io.Serializable;
+
+abstract public class Fossil implements Serializable{
+	
+	public static final long serialVersionUID = 8L;
 	
 	private String name;
 	private int hardness; 

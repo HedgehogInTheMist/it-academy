@@ -1,7 +1,10 @@
 package oop_2;
 
-public class SemiPreciousStone extends NaturalStone implements Dichromatism, Comparable<Object> {
+import java.io.Serializable;
 
+public class SemiPreciousStone extends NaturalStone implements Dichromatism, Comparable<Object>, Serializable {
+
+	public static final long serialVersionUID = 8L;
 	private boolean dichroism = true;
 	private int transparency; // gradation from 1 up to 24 from transparent to
 								// opaque (nontransparent)

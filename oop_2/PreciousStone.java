@@ -1,7 +1,11 @@
 package oop_2;
 
-public class PreciousStone extends NaturalStone implements Fluorescent, Comparable<PreciousStone> {
+import java.io.Serializable;
 
+public class PreciousStone extends NaturalStone implements Fluorescent, Comparable<PreciousStone>, Serializable {
+
+	public static final long serialVersionUID = 8L; 
+	
 	private boolean luminescence = true; 
 	private int transparency; // gradation from 1 up to 24 from transparent to
 								// opaque (nontransparent)

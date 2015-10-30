@@ -1,4 +1,5 @@
 package oop_2;
+import java.io.InvalidObjectException;
 /**
  * Определить иерархию драгоценных и полудрагоценных камней. Отобрать камни для ожерелья. Подсчитать общий вес (в каратах) и стоимость.
  * Провести сортировку камней ожерелья на основе ценности.
@@ -32,7 +33,18 @@ public class Solution {
 			ProductionShift productionShift = new ProductionShift();
 			productionShift.startProductionShift();
 			
+			String fileName = "d:\\Serialization.data";
+			Serializator serializator = new Serializator();
+			boolean check = serializator.serialization(productionShift, fileName);
+			ProductionShift productionShift2 = null;
+			/*try {
+				productionShift2 = serializator.deserialization(fileName);
+			} catch (InvalidObjectException e) {
+				System.err.println("Error");
+				e.printStackTrace();
+			}
 			
+			*/
 			//GemSorting gemSorting = new GemSorting();
 			//gemSorting.gemsAssessment(gemSorting.listOfPreciousGems);
 			

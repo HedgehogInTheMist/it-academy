@@ -1,6 +1,10 @@
 package oop_2;
 
-public abstract class NaturalStone extends Fossil {
+import java.io.Serializable;
+
+public abstract class NaturalStone extends Fossil implements Serializable {
+	
+	public static final long serialVersionUID = 8L;
 	
 	private int length;
 	private int width;

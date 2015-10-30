@@ -1,7 +1,7 @@
 package oop_2;
 
+import java.io.InvalidObjectException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
@@ -74,6 +74,19 @@ public class ProductionShift {
 				listForAssessment.clear();	
 				for(PreciousStone element : gemSorting.listOfPreciousGems) {
 					listForAssessment.add(element);
+					
+					String fileName = "d:\\Serialization.data";
+					Serializator serializator = new Serializator();
+					boolean check = serializator.serialization(element, fileName);
+					
+					try {
+					element = (PreciousStone)serializator.deserialization(fileName);
+				} catch (InvalidObjectException e) {
+					System.err.println("Error");
+					e.printStackTrace();
+				}
+				
+				
 				}
 				
 			} else {
