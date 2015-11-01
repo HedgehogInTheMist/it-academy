@@ -1,14 +1,14 @@
-package oop_2;
+package oop_2.hierarchy;
 
 import java.io.Serializable;
 
-public class SemiPreciousStone extends NaturalStone implements Dichromatism, Comparable<Object>, Serializable {
+import oop_2.interfaces.Dichromatism;
 
-	public static final long serialVersionUID = 8L;
-	private boolean dichroism = true;
-	private int transparency; // gradation from 1 up to 24 from transparent to
-								// opaque (nontransparent)
-	
+public class SemiPreciousStone extends NaturalStone implements Dichromatism, Serializable {
+
+	public static final long serialVersionUID = 7L;
+	protected boolean dichroism = true;
+
 	public SemiPreciousStone() {
 	}
 	
@@ -18,51 +18,47 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism, Com
 		super.setWidth(width);
 		super.setHeight(height);
 		super.setHardness(hardness);
-		this.transparency = transparency;
+		super.setTransparency(transparency); // gradation from 1 up to 24 from transparent to opaque (nontransparent)
 	}
-
+	
 	@Override
 	public int getLength() {
-		// TODO Auto-generated method stub
 		return super.getLength();
 	}
 
 	@Override
 	public void setLength(int length) {
-		// TODO Auto-generated method stub
 		super.setLength(length);
 	}
 
 	@Override
 	public int getWidth() {
-		// TODO Auto-generated method stub
 		return super.getWidth();
 	}
 
 	@Override
 	public void setWidth(int width) {
-		// TODO Auto-generated method stub
 		super.setWidth(width);
 	}
 
 	@Override
 	public int getHeight() {
-		// TODO Auto-generated method stub
 		return super.getHeight();
 	}
 
 	@Override
 	public void setHeight(int height) {
-		// TODO Auto-generated method stub
 		super.setHeight(height);
 	}
 
+	@Override
 	public int getTransparency() {
-		return transparency;
+		return super.getTransparency();
 	}
 
+	@Override
 	public void setTransparency(int transparency) {
-		this.transparency = transparency;
+		super.setTransparency(transparency);
 	}
 
 	@Override
@@ -102,17 +98,6 @@ public class SemiPreciousStone extends NaturalStone implements Dichromatism, Com
 			System.out.println("It's seems for this jewelry isn't possible to change visible color");
 		}
 		return false;
-	}
-
-	//@Override
-	public int compareTo(Object obj) {
-		SemiPreciousStone tmpCompare = (SemiPreciousStone)obj;
-		if(this.transparency < tmpCompare.transparency) {
-			return -1;
-		} else if(this.transparency > tmpCompare.transparency) {
-			return 1;
-		}
-		return 0;
 	}
 }
 

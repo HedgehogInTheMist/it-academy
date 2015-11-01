@@ -1,16 +1,31 @@
-package oop_2;
+package oop_2.hierarchy;
 
 import java.io.Serializable;
 
-public abstract class NaturalStone extends Fossil implements Serializable {
+/**
+ * Second branch in hierarchy, extends from class Fossil
+ * @author Hedgehog
+ *
+ */
+public abstract class NaturalStone extends Fossil implements Comparable<NaturalStone>, Serializable {
 	
-	public static final long serialVersionUID = 8L;
+	public static final long serialVersionUID = 7L;
 	
 	private int length;
 	private int width;
 	private int height;
 	private String color;
+	private int transparency;
 	
+	
+	public int getTransparency() {
+		return transparency;
+	}
+
+	public void setTransparency(int transparency) {
+		this.transparency = transparency;
+	}
+
 	public String getColor() {
 		return color;
 	}
@@ -70,7 +85,23 @@ public abstract class NaturalStone extends Fossil implements Serializable {
 		
 	}
 
-	public int getTransparency() {
-		return (Integer) null;
+	@Override
+	public int compareTo(NaturalStone obj) {
+		NaturalStone tmpCompare = obj;
+		if(this.transparency < tmpCompare.transparency) {
+			return -1;
+		} else if(this.transparency > tmpCompare.transparency) {
+			return 1;
+		}
+		return 0;
 	}
+
+
+
+
+	
+
+	
+
+		
 }

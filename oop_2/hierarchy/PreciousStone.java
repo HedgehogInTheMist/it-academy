@@ -1,14 +1,15 @@
-package oop_2;
+package oop_2.hierarchy;
 
 import java.io.Serializable;
 
-public class PreciousStone extends NaturalStone implements Fluorescent, Comparable<PreciousStone>, Serializable {
+import oop_2.gemsProduction.Jeweller;
+import oop_2.interfaces.Fluorescent;
 
-	public static final long serialVersionUID = 8L; 
+public class PreciousStone extends NaturalStone implements Fluorescent, Serializable {
+
+	public static final long serialVersionUID = 7L; 
 	
 	private boolean luminescence = true; 
-	private int transparency; // gradation from 1 up to 24 from transparent to
-								// opaque (nontransparent)
 
 	public PreciousStone() {
 	}
@@ -19,15 +20,17 @@ public class PreciousStone extends NaturalStone implements Fluorescent, Comparab
 		super.setWidth(width);
 		super.setHeight(height);
 		super.setHardness(hardness);
-		this.transparency = transparency;
+		super.setTransparency(transparency); // gradation from 1 up to 24 from transparent to opaque (nontransparent)
 	}
 
+	@Override
 	public int getTransparency() {
-		return transparency;
+		return super.getTransparency();
 	}
 
+	@Override
 	public void setTransparency(int transparency) {
-		this.transparency = transparency;
+		super.setTransparency(transparency);
 	}
 
 	@Override
@@ -59,10 +62,9 @@ public class PreciousStone extends NaturalStone implements Fluorescent, Comparab
 		return luminescence;
 	}
 
-	//
 	Jeweller jeweller;
 
-	// What is jeweller on the work shift
+	// Which jeweller is on the work shift
 	public Jeweller getJeweller() {
 		return jeweller;
 	}
@@ -76,16 +78,5 @@ public class PreciousStone extends NaturalStone implements Fluorescent, Comparab
 			System.out.println("I never glow from PreciousStone class");
 			return false;
 		}
-	}
-
-	@Override
-	public int compareTo(PreciousStone obj) {
-		PreciousStone tmpCompare = obj;
-		if(this.transparency < tmpCompare.transparency) {
-			return -1;
-		} else if(this.transparency > tmpCompare.transparency) {
-			return 1;
-		}
-		return 0;
 	}
 }

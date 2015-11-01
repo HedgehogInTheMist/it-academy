@@ -1,4 +1,4 @@
-package oop_2;
+package oop_2.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,15 +9,22 @@ import java.io.InvalidClassException;
 import java.io.InvalidObjectException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
+import oop_2.hierarchy.NaturalStone;
+
+/**
+ * Implements serialization and deserialization process
+ * @author Hedgehog
+ */
 public class Serializator {
 	/**
-	 * 
-	 * @param Object
-	 * @param fileName
-	 * @return
+	 * Implements object serialization in the course of transfering them to file 
+	 * @param Fossil object for serialization
+	 * @return result of operation in true or false
 	 */
-	public boolean serialization(Object obj, String fileName) {
+	public boolean serialization(ArrayList<NaturalStone> list) {
+		String fileName = "d:\\Serialization.data";
 		boolean flag = false;
 		File file = new File(fileName);
 		ObjectOutputStream objectOutputStream = null;
@@ -25,7 +32,7 @@ public class Serializator {
 			FileOutputStream fileOutputStream = new FileOutputStream(file);
 			if(fileOutputStream != null) {
 				objectOutputStream = new ObjectOutputStream(fileOutputStream);
-				objectOutputStream.writeObject(obj); //Here it is! Serialization! Hurray!!!
+				objectOutputStream.writeObject(list); //Here it is! Serialization! Hurray!!!
 				flag = true;
 			}
 		} catch (FileNotFoundException e) {
@@ -44,15 +51,20 @@ public class Serializator {
 		return flag;
 		}
 	
-	public Object deserialization(String fileName) throws InvalidObjectException {
+	/**
+	 * Implement deserialization object back from file
+	 * @return deserialized object
+	 * @throws InvalidObjectException
+	 */
+	public ArrayList<NaturalStone> deserialization() throws InvalidObjectException {
+		String fileName = "d:\\Serialization.data";
 		File file = new File(fileName);
 		ObjectInputStream objectInputStream = null;
 		try {
 			FileInputStream fileInputStream = new FileInputStream(file);
 			objectInputStream = new ObjectInputStream(fileInputStream); //And here it is back, again. Deserialization! Large as life and twice as ugly!
-			Object Object = (Object) objectInputStream.readObject();
-			//Object Object = (Object) objectInputStream.readObject();
-			return Object;
+			ArrayList<NaturalStone> list = (ArrayList<NaturalStone>) objectInputStream.readObject();
+			return list;
 		} catch (ClassNotFoundException cnfe) {
 			System.err.println("Class doesn't exist: " + cnfe);
 		} catch (FileNotFoundException fnfe) {
@@ -70,6 +82,6 @@ public class Serializator {
 						System.err.println("Error during closing stream");
 					}
 		}
-		throw new InvalidObjectException("Object not recieved");
+		throw new InvalidObjectException("Fossil not recieved");
 	}
 }

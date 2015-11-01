@@ -1,10 +1,14 @@
-package oop_2;
+package oop_2.hierarchy;
 
 import java.io.Serializable;
-
+/**
+ * The highest forefathers in hierarchy
+ * @author Hedgehog
+ *
+ */
 abstract public class Fossil implements Serializable{
 	
-	public static final long serialVersionUID = 8L;
+	public static final long serialVersionUID = 7L;
 	
 	private String name;
 	private int hardness; 

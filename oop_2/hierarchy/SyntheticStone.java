@@ -1,11 +1,18 @@
-package oop_2;
-
+package oop_2.hierarchy;
+/**
+ * Second branch in hierarchy, extends from class Fossil
+ * @author Hedgehog
+ *
+ */
 public abstract class SyntheticStone extends Fossil {
+	
+	public static final long serialVersionUID = 7L;
+	
 	private int length;
 	private int width;
 	private int height;
 	private String color;
-	
+	private int transparency; // gradation from 1 up to 24 from transparent to opaque (nontransparent)
 	
 	public String getColor() {
 		return color;
@@ -65,5 +72,13 @@ public abstract class SyntheticStone extends Fossil {
 	public SyntheticStone(String name, int hardness) {
 		setName(name);
 		setHardness(hardness);
+	}
+
+	public int getTransparency() {
+		return transparency;
+	}
+
+	public void setTransparency(int transparency) {
+		this.transparency = transparency;
 	}
 }

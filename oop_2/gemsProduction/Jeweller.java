@@ -1,7 +1,11 @@
-package oop_2;
+package oop_2.gemsProduction;
 
-public class Jeweller {
+import java.io.Serializable;
 
+public class Jeweller implements Serializable{
+
+	public static final long serialVersionUID = 7L;
+	
 	private String surname;
 	private String name;
 
