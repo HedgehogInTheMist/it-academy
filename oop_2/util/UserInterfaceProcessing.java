@@ -24,7 +24,6 @@ public class UserInterfaceProcessing implements Serializable {
 			System.out.format("%11s: %5.3f carat%n", entry.getValue(), entry.getKey());
 		}
 	}
-	
 
 	/**
 	 * Handling SECOND entry user-interface menu. Implements all gems cost estimation. 

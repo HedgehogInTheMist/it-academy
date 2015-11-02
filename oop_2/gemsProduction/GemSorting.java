@@ -42,8 +42,6 @@ public class GemSorting implements Serializable {
 		for(PreciousStone element : list) {
 			if(element != null) {	
 				System.out.format("%-14s%-12d%-12d%-12d%-12d%-9d%n", element.getName(), element.getHardness(), element.getLength(), element.getWidth(), element.getHeight(), element.getTransparency());
-				/*Serializator serializator = new Serializator();
-				serializator.serialization(element);*/
 			}
 		}
 		System.out.println();
