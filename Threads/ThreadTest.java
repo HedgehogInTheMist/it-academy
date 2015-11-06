@@ -1,4 +1,4 @@
-package Threads;
+/*package Threads;
 
 
 public class ThreadTest extends Thread {
@@ -7,3 +7,4 @@ public class ThreadTest extends Thread {
 		Solution.print10();
 	}
 }
+*/
