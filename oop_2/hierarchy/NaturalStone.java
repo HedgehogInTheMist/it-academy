@@ -9,31 +9,14 @@ import java.io.Serializable;
  */
 public abstract class NaturalStone extends Fossil implements Comparable<NaturalStone>, Serializable {
 	
-	public static final long serialVersionUID = 7L;
+	private static final long serialVersionUID = -8374632974608181763L;
 	
 	private int length;
 	private int width;
 	private int height;
+	private int transparency; // gradation from 1 up to 24 from transparent to opaque (nontransparent)
 	private String color;
-	private int transparency;
 	
-	
-	public int getTransparency() {
-		return transparency;
-	}
-
-	public void setTransparency(int transparency) {
-		this.transparency = transparency;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
-
 	public int getLength() {
 		return length;
 	}
@@ -58,31 +41,20 @@ public abstract class NaturalStone extends Fossil implements Comparable<NaturalS
 		this.height = height;
 	}
 
-	@Override
-	public String getName() {
-		return super.getName();
+	public int getTransparency() {
+		return transparency;
 	}
 
-	@Override
-	public void setName(String name) {
-		super.setName(name);
-	}
-
-	@Override
-	public int getHardness() {
-		return super.getHardness();
-	}
-
-	@Override
-	public void setHardness(int hardness) {
-		super.setHardness(hardness);
-	}
-
-	public NaturalStone() {
+	public void setTransparency(int transparency) {
+		this.transparency = transparency;
 	}
 	
-	public NaturalStone(String name) {
-		
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	@Override
@@ -96,12 +68,14 @@ public abstract class NaturalStone extends Fossil implements Comparable<NaturalS
 		return 0;
 	}
 
-
-
-
+	@Override
+	public String toString() {
+		return "NaturalStone [length=" + length + ", width=" + width + ", height=" + height + ", transparency="
+				+ transparency + ", color=" + color + ", getLength()=" + getLength() + ", getWidth()=" + getWidth()
+				+ ", getHeight()=" + getHeight() + ", getTransparency()=" + getTransparency() + ", getName()="
+				+ getName() + ", getHardness()=" + getHardness() + "]";
+	}
 	
-
 	
-
-		
+	
 }

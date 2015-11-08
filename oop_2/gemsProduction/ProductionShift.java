@@ -15,8 +15,9 @@ import oop_2.util.UserInterfaceProcessing;
 
 public class ProductionShift implements Serializable {
 	
-	public static final long serialVersionUID = 7L;
-
+	private static final long serialVersionUID = 16726693954669404L;
+	
+	double coefficient; //from its value depends shape of gem cutting
 	private String workOption; //for choosing work shift - first or second 
 	private String[] jewelryVariety = {"Beads", "Pendants", "Earrings", "Diadems", "Neklaces"};
 	protected String[] preciousStoneVariety = {"Diamond", "Corund", "Ruby", "Sapphire", "Beryl", "Aquamarine", "Alexandrite", "Pearl"};
@@ -30,8 +31,6 @@ public class ProductionShift implements Serializable {
 	Serializator serializator = new Serializator();
 	GemSorting gemSorting = new GemSorting();
 	UserInterfaceProcessing userInterfaceProcessing = new UserInterfaceProcessing();
-
-	double coefficient; //from its value depends shape of gem cutting
 
 	/**
 	 * Randomly jeweller chooses coefficient and consequently shape of gem cutting
@@ -130,7 +129,7 @@ public class ProductionShift implements Serializable {
 	}
 
 	/**
-	 * Filling "ArrayList jewellers" with our Jewellers
+	 * Filling "ArrayList jewellers" with our Jewellers Creates two working jewellers
 	 */
 	public void buildJewellerWorkers() {
 		Jeweller jewellerOne = new Jeweller("Hubert", "J. Farnswort"); 

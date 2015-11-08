@@ -6,23 +6,15 @@ package oop_2.hierarchy;
  */
 public abstract class SyntheticStone extends Fossil {
 	
-	public static final long serialVersionUID = 7L;
+	private static final long serialVersionUID = 529378475236628538L;
 	
 	private int length;
 	private int width;
 	private int height;
 	private String color;
 	private int transparency; // gradation from 1 up to 24 from transparent to opaque (nontransparent)
-	
-	public String getColor() {
-		return color;
-	}
 
-	public void setColor(String color) {
-		this.color = color;
-	}
-
-	public double getLength() {
+	public int getLength() {
 		return length;
 	}
 
@@ -30,7 +22,7 @@ public abstract class SyntheticStone extends Fossil {
 		this.length = length;
 	}
 
-	public double getWidth() {
+	public int getWidth() {
 		return width;
 	}
 
@@ -38,7 +30,7 @@ public abstract class SyntheticStone extends Fossil {
 		this.width = width;
 	}
 
-	public double getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
@@ -46,32 +38,12 @@ public abstract class SyntheticStone extends Fossil {
 		this.height = height;
 	}
 
-	public SyntheticStone() {
-	}
-	
-	@Override
-	public String getName() {
-		return super.getName();
+	public String getColor() {
+		return color;
 	}
 
-	@Override
-	public void setName(String name) {
-		super.setName(name);
-	}
-
-	@Override
-	public int getHardness() {
-		return super.getHardness();
-	}
-
-	@Override
-	public void setHardness(int hardness) {
-		super.setHardness(hardness);
-	}
-
-	public SyntheticStone(String name, int hardness) {
-		setName(name);
-		setHardness(hardness);
+	public void setColor(String color) {
+		this.color = color;
 	}
 
 	public int getTransparency() {

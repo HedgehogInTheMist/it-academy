@@ -2,12 +2,11 @@ package oop_2.hierarchy;
 
 import java.io.Serializable;
 
-import oop_2.gemsProduction.Jeweller;
 import oop_2.interfaces.Fluorescent;
 
 public class PreciousStone extends NaturalStone implements Fluorescent, Serializable {
 
-	public static final long serialVersionUID = 7L; 
+	private static final long serialVersionUID = -5869740807963795771L;
 	
 	private boolean luminescence = true; 
 
@@ -24,54 +23,8 @@ public class PreciousStone extends NaturalStone implements Fluorescent, Serializ
 	}
 
 	@Override
-	public int getTransparency() {
-		return super.getTransparency();
-	}
-
-	@Override
-	public void setTransparency(int transparency) {
-		super.setTransparency(transparency);
-	}
-
-	@Override
-	public String getName() {
-		return super.getName();
-	}
-
-	@Override
-	public void setName(String name) {
-		super.setName(name);
-	}
-
-	@Override
-	public int getHardness() {
-		return super.getHardness();
-	}
-
-	@Override
-	public void setHardness(int hardness) {
-		super.setHardness(hardness);
-	}
-
-	public boolean isLuminescence() {
-		return luminescence;
-	}
-
-	public boolean setLuminescence(boolean luminescence) {
-		this.luminescence = luminescence;
-		return luminescence;
-	}
-
-	Jeweller jeweller;
-
-	// Which jeweller is on the work shift
-	public Jeweller getJeweller() {
-		return jeweller;
-	}
-
-	@Override
 	public boolean glow() {
-		if (setLuminescence(true)) {
+		if (luminescence) {
 			System.out.println("I glow");
 			return true;
 		} else {

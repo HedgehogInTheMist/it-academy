@@ -8,11 +8,19 @@ import java.io.Serializable;
  */
 abstract public class Fossil implements Serializable{
 	
-	public static final long serialVersionUID = 7L;
+	private static final long serialVersionUID = -4630494807731230796L;
 	
 	private String name;
 	private int hardness; 
 
+	public Fossil() {
+	}
+	
+	public Fossil(String name, int hardness) {
+		this.name = name;
+		this.hardness = hardness;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -27,16 +35,5 @@ abstract public class Fossil implements Serializable{
 
 	public void setHardness(int hardness) {
 		this.hardness = hardness;
-	}
-
-	public Fossil() {
-		
-	}
-	public Fossil(String name, int hardness) {
-		this.name = name;
-		this.hardness = hardness;
-	}
-	void print() {
-		System.out.println("I print from Fossil");
 	}
 }

@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class TransparencyLogicException extends Exception implements Serializable {
 	
-	private static final long serialVersionUID = 7L;
-	
+	private static final long serialVersionUID = 703924877174216496L;
+
 	public TransparencyLogicException () {
 	}
 	

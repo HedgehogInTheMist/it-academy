@@ -82,6 +82,6 @@ public class Serializator {
 						System.err.println("Error during closing stream");
 					}
 		}
-		throw new InvalidObjectException("Fossil not recieved");
+		throw new InvalidObjectException("ArrayList<NaturalStone> list not recieved");
 	}
 }

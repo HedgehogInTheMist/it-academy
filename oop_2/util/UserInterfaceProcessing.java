@@ -10,16 +10,14 @@ import oop_2.hierarchy.NaturalStone;
 
 public class UserInterfaceProcessing implements Serializable {
 
-	public static final long serialVersionUID = 7L;
+	private static final long serialVersionUID = -3593317735343496996L;
 	
-	//ProductionShift productionShift = new ProductionShift();
 	Serializator serializator = new Serializator();
 	
 	/**
 	 * Handling FIRST entry user-interface menu. Implements general evaluation gems in carat and their value. 
 	 */
 	public void gemsAssessment(TreeMap<Double, String> map)  {
-		//buildMapOfGemsValue(list, map);
 		for(Map.Entry<Double, String> entry : map.entrySet()) {
 			System.out.format("%11s: %5.3f carat%n", entry.getValue(), entry.getKey());
 		}
