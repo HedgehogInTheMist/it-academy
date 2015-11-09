@@ -39,7 +39,7 @@ public class Solution extends Thread {
 	 * Print numbers from 1 up to 100. Feeding 10 numbers in line separeted with
 	 * space
 	 */
-	public /*synchronized*/ static void print10() {
+	public synchronized static void print10() {
 		// public static void print10() {
 		int number = 1;
 		for (int i = 1; i <= 10; i++) {
