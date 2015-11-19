@@ -30,7 +30,7 @@ public class ProductionShift implements Serializable {
 
 	Serializator serializator = new Serializator();
 	GemSorting gemSorting = new GemSorting();
-	UserInterfaceProcessing userInterfaceProcessing = new UserInterfaceProcessing();
+	//UserInterfaceProcessing userInterfaceProcessing = new UserInterfaceProcessing();
 
 	/**
 	 * Randomly jeweller chooses coefficient and consequently shape of gem cutting

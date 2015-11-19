@@ -21,14 +21,16 @@ public class Solution extends Thread {
 						print10();
 					}
 				}.start();
+				Thread.sleep(1000);
 				
 				new Thread("Thread 2:") {
 					public void run() {
 						print10();
 					}
 				}.start();
+				Thread.sleep(1000);
+				
 				break;
-			
 			case "q":
 				break;
 			}
@@ -42,8 +44,9 @@ public class Solution extends Thread {
 	public synchronized static void print10() {
 		// public static void print10() {
 		int number = 1;
+		System.out.print(Thread.currentThread().getName());
 		for (int i = 1; i <= 10; i++) {
-			System.out.print(Thread.currentThread().getName());
+			
 			for (int j = 1; j <= 10; j++) {
 				System.out.print(" " + number + " ");
 				number++;
