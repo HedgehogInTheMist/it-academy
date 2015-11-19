@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution extends Thread {
+public class Solution_old_depricated extends Thread {
 	public static void main(String[] args) throws InterruptedException, IOException {
 
 		System.out.println("Enter \"start\" for starting threads or (q/Q) for Exit: ");
@@ -15,7 +15,7 @@ public class Solution extends Thread {
 		while (true) {
 			switch (userAnswer) {
 			case "start":
-
+				
 				new Thread("Thread 1:") {
 					public void run() {
 						print10();
