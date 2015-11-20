@@ -32,10 +32,9 @@ public class Customer implements Runnable {
 				Map.Entry<String, Integer> pair = iterator.next();
 				if(pair.getKey().equals(product)) {
 					Integer temp = pair.getValue();
-					temp--;
+					temp = temp - 1;
 					pair.setValue(temp);
 //					Shop.amountOfProduct.put(product, temp);
-					//Shop.setAmountOfProduct(Shop.amountOfProduct);
 					System.out.println(product + " remain: " + pair.getValue());
 				}
 			}

@@ -1,0 +1,35 @@
+﻿<!--Create DTD and XSD scheme for checking syntax and validity of student.xml
+Restrictions: 
+- faculties should be within following enumeration: "ksis" "mmf" "fitu"
+- complexType element "student" should appear at most 20 entries -->
+
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!DOCTYPE studentList
+[
+<!ELEMENT studentList (student+)>
+<!ELEMENT student (firstName, lastName, age, faculty)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT faculty (#PCDATA|ksis)*>
+]>
+
+
+<studentList>
+	<student>
+		<firstName>Max</firstName>
+		<lastName>Payne</lastName>
+		<age>42</age>
+		<faculty>ksis</faculty>
+	</student>
+	<student >
+		<firstName>John</firstName>
+		<lastName>Connor</lastName>
+		<age>18</age>
+		<faculty>mmf</faculty>
+	</student>
+</studentList>
+
+
+
+
