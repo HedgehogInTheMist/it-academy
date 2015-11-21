@@ -4,15 +4,26 @@
  	 <xsl:output method="html"/>
 	 
 	 <xsl:template match="/studentList">
-		<table border="1"><xsl:apply-templates/></table>
-	 </xsl:template>
+		  <html>
+		   <body>
+			<table border="1">
+			 <tr>
+			  <td>Name</td>
+			  <td>Last Name</td>
+			  <td>Age</td>
+			  <td>Faculty</td>
+			 </tr>
+
+			 <xsl:apply-templates />
+			</table>
+		   </body>
+		  </html>
+	</xsl:template>
+	 
 	 <xsl:template match="/studentList/student">
-		
-	 <tr><xsl:apply-templates/></tr>
+		 <tr><xsl:apply-templates/></tr>
 	 </xsl:template>
-	 
-	 
-	 
+		 
 	 <xsl:template match="/studentList/student/firstName">
 		<td><xsl:value-of select="text()"/></td>
 	 </xsl:template>
