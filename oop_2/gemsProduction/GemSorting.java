@@ -3,6 +3,7 @@ package oop_2.gemsProduction;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 import oop_2.hierarchy.PreciousStone;
 import oop_2.hierarchy.SemiPreciousStone;
@@ -64,8 +65,8 @@ public class GemSorting implements Serializable {
 	/**
 	 * Prints header of informational table
 	 */
-	public void headerPrint() {
-		System.out.format("%-14s%-12s%-12s%-12s%-12s%-19s%n", "List Of Gems", "Length (mm)", "Width (mm)", "Height (mm)", "Hardness", "Transparency" );
+	public void headerPrint(ResourceBundle bundle) {
+		System.out.format("%-14s%-12s%-12s%-12s%-12s%-19s%n", bundle.getString("list"), bundle.getString("length"), bundle.getString("width"), bundle.getString("height"), bundle.getString("hardness"), bundle.getString("transparency"));
 	}
 	
 	/**

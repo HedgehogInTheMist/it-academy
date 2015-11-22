@@ -4,21 +4,21 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.ResourceBundle;
 import java.util.TreeMap;
 
 import oop_2.hierarchy.NaturalStone;
 import oop_2.hierarchy.PreciousStone;
 import oop_2.hierarchy.SemiPreciousStone;
 import oop_2.util.Serializator;
-import oop_2.util.UserInterfaceProcessing;
 
 
 public class ProductionShift implements Serializable {
 	
 	private static final long serialVersionUID = 16726693954669404L;
 	
-	double coefficient; //from its value depends shape of gem cutting
-	private String workOption; //for choosing work shift - first or second 
+	double coefficient; 
+	private String workOption;  
 	private String[] jewelryVariety = {"Beads", "Pendants", "Earrings", "Diadems", "Neklaces"};
 	protected String[] preciousStoneVariety = {"Diamond", "Corund", "Ruby", "Sapphire", "Beryl", "Aquamarine", "Alexandrite", "Pearl"};
 	private ArrayList<Jeweller> jewellers = new ArrayList<Jeweller>();
@@ -61,26 +61,26 @@ public class ProductionShift implements Serializable {
 	/**
 	 * Chooses either precious or semi-precious gems for production jewelry 
 	 */
-	public void preciousOrSemiPrecious() {
+	public void preciousOrSemiPrecious(ResourceBundle bundle) {
 		int preciousOrSemiPrecious = (Math.random() < 0.5) ? 0 : 1;
 			if(preciousOrSemiPrecious == 1)
-				printPreciousGems();
+				printPreciousGems(bundle);
 			else {
-				printSemiPreciousGems();
+				printSemiPreciousGems(bundle);
 			}
 	}
 
 /**
  * Prints elements of user-interface menu and list of Semi-precious gems sorted by transparency field and forms transitional list "listForAssessment" for further work 
  */
-	private void printSemiPreciousGems() {
-		System.out.println(" Semi-precious gems\n");
-		System.out.println("Here is a descriptive list of all gems sorted in ascending order of their transparency:");
+	private void printSemiPreciousGems(ResourceBundle bundle) {
+		System.out.println(" " + bundle.getString("SPG"));
+		System.out.println(bundle.getString("tableDescription2"));
 		gemSorting.listOfSemiPreciousGems.clear();			 /*Clearing collection "listOfSemiPreciousGems", in case we start production two and more times. 
 																Here collection is required to be empty */ 	
 		gemSorting.buildListOfSemiPreciousGems();
 		Collections.sort(gemSorting.listOfSemiPreciousGems); //Sorting our collection by field transparency in accordance with condition
-		gemSorting.headerPrint();							 //Printing rezult 
+		gemSorting.headerPrint(bundle);							 //Printing rezult 
 		gemSorting.showAllSemiPreciousStone(gemSorting.listOfSemiPreciousGems);
 
 		//coping created list of gems for future carat and price assessment				
@@ -95,14 +95,14 @@ public class ProductionShift implements Serializable {
 /**
  * Prints elements of user-interface menu and list of Precious gems sorted by transparency field and forms transitional list "listForAssessment" for further work
  */
-	private void printPreciousGems() {
-			System.out.println(" Precious gems\n");
-			System.out.println("Here is a descriptive list of all gems sorted in ascending order of their transparency:");
+	private void printPreciousGems(ResourceBundle bundle) {
+			System.out.println(" " + bundle.getString("PG"));
+			System.out.println(bundle.getString("tableDescription1"));
 			gemSorting.listOfPreciousGems.clear(); /*Clearing collection "listOfPreciousGems", in case we start production two and more times. 
 													  Here collection is required to be empty */
 			gemSorting.buildListOfPreciousGems();
 			Collections.sort(gemSorting.listOfPreciousGems); //Sorting our collection by field transparency in accordance with condition
-			gemSorting.headerPrint();
+			gemSorting.headerPrint(bundle);
 			gemSorting.showAllPreciousStone(gemSorting.listOfPreciousGems);
 
 			//coping created list of gems for future carat and price assessment
@@ -117,14 +117,14 @@ public class ProductionShift implements Serializable {
 	/**
 	 * Implements rotation production shift between two jewellers.
 	 */
-	public void jewellerRotation() {
+	public void jewellerRotation(ResourceBundle bundle) {
 		int randIndex = (Math.random() < 0.5) ? 0 : 1;
 		if (randIndex == 0) {
-			System.out.println("\n" + jewellers.get(0).getName() + " " + jewellers.get(0).getSurname() + " is at work upon " + getRandWorkOption());
-			System.out.print(jewellers.get(0).getName() + " considers it done out of");
+			System.out.println("\n" + jewellers.get(0).getName() + " " + jewellers.get(0).getSurname() + " " + bundle.getString("workUpon") + " " + getRandWorkOption());
+			System.out.print(jewellers.get(0).getName() + " " + bundle.getString("consider"));
 		} else {
-			System.out.println("\n" + jewellers.get(1).getName() + " " + jewellers.get(1).getSurname() + " is at work upon " + getRandWorkOption());
-			System.out.print(jewellers.get(1).getName() + " considers it done out of");
+			System.out.println("\n" + jewellers.get(1).getName() + " " + jewellers.get(1).getSurname() + " " + bundle.getString("workUpon") + " " + getRandWorkOption());
+			System.out.print(jewellers.get(1).getName() + " " + bundle.getString("consider"));
 		}
 	}
 
