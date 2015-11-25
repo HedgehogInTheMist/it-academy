@@ -10,9 +10,11 @@ public class Thread1 implements Runnable{
 	
 	@Override
 	public void run() {
+	while(true) {
 		for(int i = 0; i < 5; i++) {
 			calculation.print10_v1();
 			System.out.println();
 		}
+	}
 	}
 }
