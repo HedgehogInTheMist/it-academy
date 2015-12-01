@@ -1,0 +1,22 @@
+2015/04/01 11:04:21 - User selected English language.
+2015/04/01 11:04:22 - User selected second menu entry.
+2015/04/01 11:04:23 - User selected third menu entry.
+2015/04/01 11:04:25 - User selected fourth menu entry.
+2015/04/01 11:04:26 - User selected fifth menu entry.
+2015/04/01 11:04:28 - User quit.
+2015/04/01 11:04:31 - User selected Russian language.
+2015/04/01 11:04:33 - User selected first menu entry.
+2015/04/01 11:04:33 - User selected second menu entry.
+2015/04/01 11:04:35 - User selected third menu entry.
+2015/04/01 11:04:39 - User entered inconrrect value of Transparency. Value can't be lower 0.
+2015/04/01 11:04:41 - User selected third menu entry.
+2015/04/01 11:04:42 - User selected fifth menu entry.
+2015/04/01 11:04:45 - User quit.
+2015/12/01 23:06:05 - User selected English language.
+2015/12/01 23:06:07 - User selected first menu entry.
+2015/12/01 23:06:07 - User selected second menu entry.
+2015/12/01 23:06:08 - User selected third menu entry.
+2015/12/01 23:06:10 - User entered inconrrect value of Transparency. Value can't be lower 0.
+2015/12/01 23:06:12 - User selected third menu entry.
+2015/12/01 23:06:13 - User selected fifth menu entry.
+2015/12/01 23:06:15 - User quit.

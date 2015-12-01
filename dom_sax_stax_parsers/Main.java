@@ -1,6 +1,9 @@
+package dom_sax_stax_parsers;
+
 import java.io.File;
-import parsers.AbstractParser;
-import singleFactory.SingletonFactory;
+
+import dom_sax_stax_parsers.parsers.AbstractParser;
+import dom_sax_stax_parsers.singleFactory.SingletonFactory;
 
 public class Main {
 
