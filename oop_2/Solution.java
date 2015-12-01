@@ -6,6 +6,7 @@ import java.util.Scanner;
 import oop_2.gemsProduction.GemSorting;
 import oop_2.gemsProduction.ProductionShift;
 import oop_2.util.Localization;
+import oop_2.util.Logger;
 import oop_2.util.TransparencyLogicException;
 import oop_2.util.UserInterfaceProcessing;
 

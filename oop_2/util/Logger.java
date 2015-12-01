@@ -1,4 +1,4 @@
-package oop_2;
+package oop_2.util;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -20,3 +20,18 @@
 2015/12/01 23:06:12 - User selected third menu entry.
 2015/12/01 23:06:13 - User selected fifth menu entry.
 2015/12/01 23:06:15 - User quit.
+2015/12/01 23:09:51 - User selected Russian language.
+2015/12/01 23:09:53 - User selected first menu entry.
+2015/12/01 23:09:53 - User selected second menu entry.
+2015/12/01 23:09:54 - User selected third menu entry.
+2015/12/01 23:09:54 - User selected fifth menu entry.
+2015/12/01 23:09:58 - User quit.
+2015/12/01 23:10:05 - User selected Russian language.
+2015/12/01 23:10:05 - User selected first menu entry.
+2015/12/01 23:10:06 - User selected second menu entry.
+2015/12/01 23:10:07 - User selected third menu entry.
+2015/12/01 23:10:10 - User entered inconrrect value of Transparency. Value can't be lower 0.
+2015/12/01 23:10:12 - User selected third menu entry.
+2015/12/01 23:10:16 - User selected fourth menu entry.
+2015/12/01 23:10:17 - User selected fifth menu entry.
+2015/12/01 23:10:21 - User quit.

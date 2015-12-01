@@ -4,8 +4,6 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-import oop_2.Logger;
-
 public class Localization {
 	
 	public static Logger logger = Logger.getInstance();
