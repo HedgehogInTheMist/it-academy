@@ -11,7 +11,7 @@ Restrictions:
 <!ELEMENT firstName (#PCDATA)>
 <!ELEMENT lastName (#PCDATA)>
 <!ELEMENT age (#PCDATA)>
-<!ELEMENT faculty (#PCDATA|ksis)*>
+<!ATTLIST student faculty CDATA #FIXED "ksis">
 ]>
 
 
