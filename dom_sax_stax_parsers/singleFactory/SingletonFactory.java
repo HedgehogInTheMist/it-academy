@@ -1,9 +1,9 @@
-package singleFactory;
+package dom_sax_stax_parsers.singleFactory;
 
-import parsers.AbstractParser;
-import parsers.DOMParser;
-import parsers.SAXParser;
-import parsers.StAXParser;
+import dom_sax_stax_parsers.parsers.AbstractParser;
+import dom_sax_stax_parsers.parsers.DOMParser;
+import dom_sax_stax_parsers.parsers.SAXParser;
+import dom_sax_stax_parsers.parsers.StAXParser;
 
 /**
  * Singleton Factory produces parsers
@@ -14,7 +14,7 @@ public class SingletonFactory {
 	private SingletonFactory() {
 	}
 
-	public static class SingletonFactoryHolder {
+	private static class SingletonFactoryHolder {
 		private static final SingletonFactory INSTANCE = new SingletonFactory();
 	}
 

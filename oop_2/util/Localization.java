@@ -5,6 +5,9 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class Localization {
+	
+	public static Logger logger = Logger.getInstance();
+	
 	/**
 	 * @param scanner
 	 * @return
@@ -19,10 +22,12 @@ public class Localization {
 			switch (language) {
 			case "1": 
 				Locale enLoc = new Locale("en", "US");
+				logger.logging("User selected English language.");
 				bundle = ResourceBundle.getBundle("oop_2/resources/LangResources", enLoc);
 				break;
 			case "2":
 				Locale ruLoc = new Locale("ru", "RU");
+				logger.logging("User selected Russian language.");
 				bundle = ResourceBundle.getBundle("oop_2/resources/LangResources", ruLoc);
 				break;
 			default:

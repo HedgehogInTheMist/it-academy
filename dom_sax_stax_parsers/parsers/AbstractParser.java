@@ -1,4 +1,4 @@
-package parsers;
+package dom_sax_stax_parsers.parsers;
 
 import java.io.File;
 
